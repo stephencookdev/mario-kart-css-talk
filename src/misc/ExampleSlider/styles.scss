@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  figcaption {
+    margin-top: 3vh;
+  }
+}
+
+.box {
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  width: 20vw;
+  height: 20vh;
+}
+
+.actualSlider,
+.exampleSlider {
+  position: absolute;
+  width: 2px;
+  animation-name: example-slider;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.actualSlider {
+  height: 120%;
+  top: -10%;
+  background: red;
+}
+
+.exampleSlider {
+  height: 100%;
+  top: 0;
+  background: green;
+  animation-timing-function: linear;
+}
+
+@keyframes example-slider {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 2px);
+  }
+}

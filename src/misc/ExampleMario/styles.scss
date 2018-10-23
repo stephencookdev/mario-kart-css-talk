@@ -1,0 +1,67 @@
+@import "../Sandbox/common.scss";
+
+$base-width: 37px;
+$base-height: 50px;
+$scale: 5;
+$frame-count: 5;
+
+.mario {
+  width: 37px;
+  height: $base-height;
+  transform: scale($scale);
+
+  &.occlude {
+    overflow: hidden;
+  }
+
+  &.showAll {
+    height: #{$base-height * $frame-count};
+    transform: scale(1);
+  }
+}
+
+.marioInner {
+  display: block;
+  width: 1px;
+  height: 1px;
+  box-shadow: $mario-spritesheet;
+  animation-name: sprite-animate;
+  animation-duration: 1s;
+  animation-timing-function: steps($frame-count);
+  animation-iteration-count: infinite;
+
+  .showAll & {
+    animation: none;
+  }
+}
+
+.noccludeWrapper {
+  height: 70vh;
+  width: #{$base-width * $scale};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.noccludeFg {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid black;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+.noccludeBg {
+  opacity: 0.2;
+}
+
+@keyframes sprite-animate {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: #{-$base-height * $frame-count};
+  }
+}

@@ -1,0 +1,53 @@
+@import "./common.scss";
+
+.mario,
+.trees,
+.road:before,
+.road:after,
+.output:after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+}
+
+.mario {
+  box-shadow: $mario-box-shadow;
+}
+
+.trees {
+  box-shadow: $trees;
+}
+
+.road:before {
+  background: transparent;
+  box-shadow: $road-bg;
+  position: absolute;
+  top: 92px;
+  left: 0;
+}
+.road:after {
+  background: $road-initial;
+  box-shadow: $road;
+  position: absolute;
+  top: 92px;
+  left: 109px;
+}
+
+.output {
+  height: 174px;
+  width: 240px;
+  transform: scale(3);
+  transform-origin: top left;
+  border: 3px solid black;
+  overflow: hidden;
+  position: relative;
+}
+.output:after {
+  background: $bg-initial;
+  box-shadow: $bg;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
