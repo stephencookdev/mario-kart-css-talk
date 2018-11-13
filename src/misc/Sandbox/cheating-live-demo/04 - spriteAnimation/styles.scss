@@ -1,24 +1,27 @@
 @import "./common.scss";
 
-.mario,
+.mario:before,
 .trees:before,
 .trees:after,
 .road:before,
 .road:after,
 .output:before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 1px;
   height: 1px;
   background: transparent;
 }
 
+$mario-height: 50px;
 .mario {
   position: absolute;
-  box-shadow: $mario-box-shadow;
-  top: 116px;
-  left: 99px;
+  top: 113px;
+  left: 96px;
   transform-origin: 0 50px;
+  width: 37px;
+  height: $mario-height;
+  overflow: hidden;
   animation: driver-shake 0.1s infinite steps(2);
 }
 
@@ -31,6 +34,25 @@
   }
 }
 
+$mario-frame-count: 5;
+.mario:before {
+  transform: scaleX(-1) translateX(-37px);
+  box-shadow: $mario-spritesheet;
+  animation: sprite-animate 2s infinite steps(#{$mario-frame-count - 1});
+}
+
+@keyframes sprite-animate {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -#{$mario-height * ($mario-frame-count - 1)};
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
 .trees:before,
 .trees:after {
   position: absolute;
@@ -40,12 +62,16 @@
 .trees:before {
   top: 92px;
   left: 12px;
-  animation: tree-fade 3s ease-in infinite, tree-left-move 3s ease-in infinite;
+  animation:
+    tree-left-move 3s ease-in infinite,
+    tree-fade 3s ease-in infinite;
 }
 .trees:after {
   top: 92px;
   left: 196px;
-  animation: tree-fade 3s ease-in infinite, tree-right-move 3s ease-in infinite;
+  animation:
+    tree-right-move 3s ease-in infinite,
+    tree-fade 3s ease-in infinite;
   animation-delay: -1s;
 }
 
@@ -93,6 +119,16 @@
   box-shadow: $road;
   position: absolute;
   left: 109px;
+  animation: road-move 0.5s infinite steps(3);
+}
+
+@keyframes road-move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-246px);
+  }
 }
 
 .output {

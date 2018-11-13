@@ -22,9 +22,15 @@ div:after {
   display: block;
   background: red;
   box-shadow:
-    /* from bg */  1px 0 0 blue,    2px 0 0 red,
-    0 1px 0 blue,  1px 1px 0 red,   2px 1px 0 blue,
-    0 2px 0 red,   1px 2px 0 blue,  2px 2px 0 red;
+    /* First frame of spritesheet */
+    /* from bg */    1px 0 0 blue,    2px 0 0 red,
+    0 1px 0 blue,    1px 1px 0 red,   2px 1px 0 blue,
+    0 2px 0 red,     1px 2px 0 blue,  2px 2px 0 red,
+
+    /* Second frame of spritesheet */
+    0 3px 0 blue,    1px 3px 0 red,   2px 3px 0 blue,
+    0 5px 0 red,     1px 5px 0 blue,  2px 5px 0 red,
+    0 4px 0 blue,    1px 4px 0 red,   2px 4px 0 blue;
 }`;
 
 export default () => (
@@ -93,10 +99,10 @@ export default () => (
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "red",
-              boxShadow: `10vh 0 blue, 20vh 0 red,
-                      0 10vh blue, 10vh 10vh red, 20vh 10vh blue,
-                      0 20vh red, 10vh 20vh blue, 20vh 20vh red`
+              background: "#ff4557",
+              boxShadow: `10vh 0 #3351c8, 20vh 0 #ff4557,
+                      0 10vh #3351c8, 10vh 10vh #ff4557, 20vh 10vh #3351c8,
+                      0 20vh #ff4557, 10vh 20vh #3351c8, 20vh 20vh #ff4557`
             }}
           >
             div
@@ -113,9 +119,7 @@ export default () => (
           style={{
             width: "30vh",
             height: "30vh",
-            border: "2vh dashed green",
-            boxSizing: "content-box",
-            overflow: "hidden"
+            position: "relative"
           }}
         >
           <div
@@ -125,14 +129,37 @@ export default () => (
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "red",
-              boxShadow: `10vh 0 blue, 20vh 0 red,
-                      0 10vh blue, 10vh 10vh red, 20vh 10vh blue,
-                      0 20vh red, 10vh 20vh blue, 20vh 20vh red`
+              position: "absolute",
+              background: "#ff4557",
+              boxShadow: `10vh 0 #3351c8, 20vh 0 #ff4557,
+                      0 10vh #3351c8, 10vh 10vh #ff4557, 20vh 10vh #3351c8,
+                      0 20vh #ff4557, 10vh 20vh #3351c8, 20vh 20vh #ff4557`
             }}
           >
             :after
           </div>
+          <div
+            style={{
+              width: "10vh",
+              height: "10vh",
+              position: "absolute",
+              opacity: 0.3,
+              boxShadow: `0 30vh #3351c8, 10vh 30vh #ff4557, 20vh 30vh #3351c8,
+                      0 40vh #ff4557, 10vh 40vh #3351c8, 20vh 40vh #ff4557,
+                      0 50vh #3351c8, 10vh 50vh #ff4557, 20vh 50vh #3351c8`
+            }}
+          />
+          <div
+            style={{
+              width: "30vh",
+              height: "30vh",
+              border: "2vh dashed green",
+              top: "-2vh",
+              left: "-2vh",
+              boxSizing: "content-box",
+              position: "absolute"
+            }}
+          />
         </div>
       </div>
     </Step>

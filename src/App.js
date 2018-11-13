@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter, Route } from "react-router-dom";
 import Presentation from "./Presentation";
-import Sandbox from "./misc/Sandbox";
+import Sandbox from "./misc/Sandbox/wrappers";
 require("codemirror/mode/css/css");
 require("codemirror/mode/htmlmixed/htmlmixed");
 

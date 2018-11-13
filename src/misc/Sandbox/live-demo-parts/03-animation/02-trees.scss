@@ -1,0 +1,27 @@
+@keyframes tree-left-move {
+  from {
+    transform: translate(50px, -20px) scale(0.1);
+  }
+  to {
+    transform: translate(-45px, 15px) scale(1);
+  }
+}
+@keyframes tree-right-move {
+  from {
+    transform: translate(-50px, -20px) scale(0.1);
+  }
+  to {
+    transform: translate(45px, 15px) scale(1);
+  }
+}
+@keyframes tree-fade {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

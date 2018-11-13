@@ -47,7 +47,7 @@ export default () => (
             alignItems: "center",
             justifyContent: "center",
             background: "black",
-            boxShadow: "1vh 2vh 2vh red"
+            boxShadow: "1vh 2vh 2vh #ff4557"
           }}
         >
           div
@@ -67,7 +67,7 @@ export default () => (
             alignItems: "center",
             justifyContent: "center",
             background: "black",
-            boxShadow: "1vh 2vh 2vh red, 6vh 7vh 2vh blue"
+            boxShadow: "1vh 2vh 2vh #ff4557, 6vh 7vh 2vh #3351c8"
           }}
         >
           div
@@ -90,7 +90,7 @@ export default () => (
             alignItems: "center",
             justifyContent: "center",
             background: "black",
-            boxShadow: "1vh 2vh 0 red, 6vh 7vh 0 blue"
+            boxShadow: "1vh 2vh 0 #ff4557, 6vh 7vh 0 #3351c8"
           }}
         >
           div
@@ -110,7 +110,7 @@ export default () => (
             alignItems: "center",
             justifyContent: "center",
             background: "black",
-            boxShadow: "10vh 0 blue, 20vh 0 red"
+            boxShadow: "10vh 0 #3351c8, 20vh 0 #ff4557"
           }}
         >
           div
@@ -130,10 +130,10 @@ export default () => (
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "red",
-              boxShadow: `10vh 0 blue, 20vh 0 red,
-                        0 10vh blue, 10vh 10vh red, 20vh 10vh blue,
-                        0 20vh red, 10vh 20vh blue, 20vh 20vh red`
+              background: "#ff4557",
+              boxShadow: `10vh 0 #3351c8, 20vh 0 #ff4557,
+                        0 10vh #3351c8, 10vh 10vh #ff4557, 20vh 10vh #3351c8,
+                        0 20vh #ff4557, 10vh 20vh #3351c8, 20vh 20vh #ff4557`
             }}
           >
             div

@@ -6,7 +6,7 @@
 .road:before,
 .road:after,
 .output:before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 1px;
   height: 1px;
@@ -40,12 +40,16 @@
 .trees:before {
   top: 92px;
   left: 12px;
-  animation: tree-fade 3s ease-in infinite, tree-left-move 3s ease-in infinite;
+  animation:
+    tree-left-move 3s ease-in infinite,
+    tree-fade 3s ease-in infinite;
 }
 .trees:after {
   top: 92px;
   left: 196px;
-  animation: tree-fade 3s ease-in infinite, tree-right-move 3s ease-in infinite;
+  animation:
+    tree-right-move 3s ease-in infinite,
+    tree-fade 3s ease-in infinite;
   animation-delay: -1s;
 }
 

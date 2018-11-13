@@ -19,16 +19,6 @@
   top: 116px;
   left: 99px;
   transform-origin: 0 50px;
-  animation: driver-shake 0.1s infinite steps(2);
-}
-
-@keyframes driver-shake {
-  from {
-    transform: scaleY(1);
-  }
-  to {
-    transform: scaleY(0.97);
-  }
 }
 
 .trees:before,
@@ -40,41 +30,10 @@
 .trees:before {
   top: 92px;
   left: 12px;
-  animation: tree-fade 3s ease-in infinite, tree-left-move 3s ease-in infinite;
 }
 .trees:after {
   top: 92px;
   left: 196px;
-  animation: tree-fade 3s ease-in infinite, tree-right-move 3s ease-in infinite;
-  animation-delay: -1s;
-}
-
-@keyframes tree-left-move {
-  from {
-    transform: translate(50px, -20px) scale(0.1);
-  }
-  to {
-    transform: translate(-45px, 15px) scale(1);
-  }
-}
-@keyframes tree-right-move {
-  from {
-    transform: translate(-50px, -20px) scale(0.1);
-  }
-  to {
-    transform: translate(45px, 15px) scale(1);
-  }
-}
-@keyframes tree-fade {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .road {
