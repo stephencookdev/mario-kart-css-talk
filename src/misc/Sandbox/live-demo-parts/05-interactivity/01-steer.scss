@@ -1,0 +1,11 @@
+input:valid + .output .mario:before {
+  animation: sprite-animate-mirror 2s steps(#{$mario-frame-count - 1});
+}
+
+input:invalid + .output .mario:before {
+  animation: sprite-animate 2s steps(#{$mario-frame-count - 1});
+}
+
+input:placeholder-shown + .output .mario:before {
+  animation: none;
+}

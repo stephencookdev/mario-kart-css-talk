@@ -1,0 +1,11 @@
+$mario-height: 50px;
+.mario {
+  position: absolute;
+  top: 113px;
+  left: 96px;
+  transform-origin: 0 50px;
+  width: 37px;
+  height: $mario-height;
+  overflow: hidden;
+  animation: driver-shake 0.1s infinite steps(2);
+}

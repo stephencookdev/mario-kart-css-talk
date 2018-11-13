@@ -1,0 +1,15 @@
+input:valid + .output .mario {
+  margin-left: 80px;
+}
+
+input:invalid + .output .mario {
+  margin-left: -80px;
+}
+
+input:placeholder-shown + .output .mario {
+  margin-left: 0;
+}
+
+.mario {
+  transition: 2.2s ease-out margin-left;
+}
