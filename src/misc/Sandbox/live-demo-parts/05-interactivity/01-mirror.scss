@@ -1,0 +1,14 @@
+@keyframes sprite-animate-mirror {
+  0% {
+    margin-top: 0;
+    transform: scaleX(-1) translateX(-37px);
+  }
+  50% {
+    margin-top: -#{$mario-height * ($mario-frame-count - 1)};
+    transform: scaleX(-1) translateX(-37px);
+  }
+  100% {
+    margin-top: 0;
+    transform: scaleX(-1) translateX(-37px);
+  }
+}

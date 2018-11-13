@@ -1,6 +1,5 @@
 $mario-frame-count: 5;
 .mario:before {
-  transform: scaleX(-1) translateX(-37px);
   box-shadow: $mario-spritesheet;
   animation: sprite-animate 2s infinite steps(#{$mario-frame-count - 1});
 }
