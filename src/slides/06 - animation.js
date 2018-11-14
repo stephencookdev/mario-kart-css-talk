@@ -25,7 +25,7 @@ const stepAnimation = `div {
   animation-duration: 3s;
   animation-name: my-cool-animation;
   animation-iteration-count: infinite;
-  animation-timing-function: steps(3, start);
+  animation-timing-function: steps(4);
 }
 
 @keyframes my-cool-animation {
@@ -104,7 +104,7 @@ export default () => (
             animationDuration: "3s",
             animationName: "my-cool-animation",
             animationIterationCount: "infinite",
-            animationTimingFunction: "steps(3, start)"
+            animationTimingFunction: "steps(4)"
           }}
         >
           div
@@ -115,8 +115,7 @@ export default () => (
     <Step index={2} exact>
       <div className={classNames(styles.centerWithHeader, styles.sidebyside)}>
         <ExampleSlider timingFunction="linear" />
-        <ExampleSlider timingFunction="steps(4, start)" />
-        <ExampleSlider timingFunction="steps(4, end)" />
+        <ExampleSlider timingFunction="steps(4)" />
       </div>
     </Step>
   </CustomSlide>
