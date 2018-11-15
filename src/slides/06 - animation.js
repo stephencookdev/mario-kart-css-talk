@@ -1,14 +1,15 @@
 import React from "react";
 import { Code, Step } from "react-presents";
 import classNames from "classnames";
+import boring from "../images/boring.gif";
 import ExampleSlider from "../misc/ExampleSlider";
 import CustomSlide from "../misc/CustomSlide";
 import styles from "./common.scss";
 
 const fromToKeyframes = `div {
   animation-duration: 3s;
-  animation-name: my-cool-animation;
   animation-iteration-count: infinite;
+  animation-name: my-cool-animation;
 }
 
 @keyframes my-cool-animation {
@@ -23,8 +24,8 @@ const fromToKeyframes = `div {
 }`;
 const stepAnimation = `div {
   animation-duration: 3s;
-  animation-name: my-cool-animation;
   animation-iteration-count: infinite;
+  animation-name: my-cool-animation;
   animation-timing-function: steps(4);
 }
 
@@ -44,6 +45,12 @@ export default () => (
     <h1>Animation</h1>
 
     <Step index={0} exact>
+      <div className={styles.centerWithHeader}>
+        <img src={boring} />
+      </div>
+    </Step>
+
+    <Step index={1} exact>
       <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
         <Code value={fromToKeyframes} codeMirrorOptions={{ mode: "css" }} />
 
@@ -77,9 +84,13 @@ export default () => (
       </div>
     </Step>
 
-    <Step index={1} exact>
+    <Step index={2} exact>
       <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
-        <Code value={stepAnimation} codeMirrorOptions={{ mode: "css" }} />
+        <Code
+          value={stepAnimation}
+          codeMirrorOptions={{ mode: "css" }}
+          highlightLines={[[4, 4]]}
+        />
 
         <style type="text/css">
           {`@keyframes my-cool-animation {
@@ -112,7 +123,7 @@ export default () => (
       </div>
     </Step>
 
-    <Step index={2} exact>
+    <Step index={3} exact>
       <div className={classNames(styles.centerWithHeader, styles.sidebyside)}>
         <ExampleSlider timingFunction="linear" />
         <ExampleSlider timingFunction="steps(4)" />

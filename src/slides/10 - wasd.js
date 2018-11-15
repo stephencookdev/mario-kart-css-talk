@@ -17,7 +17,7 @@ const inputWithValue = `<input
   value="foo"
 />`;
 const cheatInputValue = `myInput.addEventListener("change", e => {
-  e.setAttribute("value", e.target.value);
+  e.target.setAttribute("value", e.target.value);
 })`;
 const inputValid = `<input
   type="text"
@@ -29,11 +29,6 @@ const inputValidStyles = `input:valid {
 input:invalid {
   border-color: red;
 }`;
-const inputValidRequired = `<input
-  type="text"
-  pattern="^correct!*$"
-  required
-/>`;
 const inputValidPlaceholder = `<input
   type="text"
   pattern="^correct!*$"
@@ -124,33 +119,6 @@ export default () => (
       <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
         <div className={styles.spread}>
           <Code
-            value={inputValidRequired}
-            codeMirrorOptions={{ mode: "htmlmixed" }}
-          />
-          <Code value={inputValidStyles} codeMirrorOptions={{ mode: "css" }} />
-        </div>
-
-        <style type="text/css">{`
-          input:valid {
-            border-color: green;
-          }
-          input:invalid {
-            border-color: red;
-          }
-        `}</style>
-
-        <input
-          className={styles.baseDemoInput}
-          pattern="^correct!*$"
-          required
-        />
-      </div>
-    </Step>
-
-    <Step index={7} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
-        <div className={styles.spread}>
-          <Code
             value={inputValidPlaceholder}
             codeMirrorOptions={{ mode: "htmlmixed" }}
           />
@@ -180,12 +148,13 @@ export default () => (
       </div>
     </Step>
 
-    <Step index={8} exact>
+    <Step index={7} exact>
       <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
         <div className={styles.spread}>
           <Code
             value={inputValidWasd}
             codeMirrorOptions={{ mode: "htmlmixed" }}
+            highlightLines={[[2, 2]]}
           />
           <Code
             value={inputValidStylesPlaceholder}
