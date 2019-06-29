@@ -1,6 +1,5 @@
 import React from "react";
 import CustomSlide from "../misc/CustomSlide";
-import onfidoLogo from "../images/onfido.png";
 import styles from "./common.scss";
 
 export default () => (
