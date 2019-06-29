@@ -8,11 +8,10 @@
     "husky": "^1.1.1",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
-    "parce": "0.0.47",
     "postcss-modules": "^1.4.1",
     "prettier": "^1.14.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-presents": "^0.7.10",
     "react-router-dom": "^4.3.1"
   },
