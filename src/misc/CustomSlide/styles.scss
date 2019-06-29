@@ -44,6 +44,22 @@
 	}
 }
 
+.custom-slide.light-mode :global {
+	.ReactCodeMirror .cm-s-reactpresents.CodeMirror {
+		filter: invert(1) contrast(150%) brightness(150%);
+
+		.cm-tag {
+			color: #f82;
+		}
+		.cm-number {
+			color: #7a1;
+		}
+		.cm-comment {
+			color: #888;
+		}
+	}
+}
+
 .title-slide {
 	display: flex;
 	align-items: center;
