@@ -111,6 +111,32 @@
   color: #f92672;
 }
 
+.quote {
+  quotes: none;
+
+  &:before {
+    content: "❝";
+    position: relative;
+    top: 0.8em;
+    text-align: left;
+  }
+  &:after {
+    content: "❞";
+    text-align: right;
+  }
+  &:before,
+  &:after {
+    display: block;
+    color: #f99e26;
+    font-size: 300%;
+  }
+}
+.quoteHighlight {
+  display: block;
+  font-size: 200%;
+  color: #f92672;
+}
+
 .baseDemoInput {
   font-size: 9vh;
   padding: 2vh;

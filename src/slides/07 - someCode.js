@@ -7,7 +7,7 @@ export default () => (
     <div className={styles.hugeText}>
       <span className={styles.main}>Live coding</span>
       <br />
-      <a href="#/sandbox-02" target="_blank">
+      <a href="#/sandbox" target="_blank">
         Let's a go!
       </a>
     </div>
