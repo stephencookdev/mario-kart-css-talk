@@ -1,3 +1,7 @@
+:global {
+  @import "../lib/codemirror.scss";
+}
+
 .subtitle {
   font-size: 5vh;
   opacity: 0.5;
