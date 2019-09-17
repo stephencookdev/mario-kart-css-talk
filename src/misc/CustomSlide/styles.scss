@@ -1,82 +1,88 @@
 .custom-slide {
-	background: #282a36;
-	color: #f8f8f2;
-	width: 100%;
-	height: 100%;
-	line-height: 1.5;
-	overflow: hidden;
+  background: #282a36;
+  color: #f8f8f2;
+  width: 100%;
+  height: 100%;
+  line-height: 1.5;
+  overflow: hidden;
 
-	h1 {
-		border-bottom: 0.25rem solid currentColor;
-		padding-bottom: 1rem;
-		margin-bottom: 1rem;
-		font-size: 10vh;
-		line-height: 1.2;
-	}
+  h1 {
+    border-bottom: 0.25rem solid currentColor;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-size: 10vh;
+    line-height: 1.2;
+  }
 
-	ul {
-		font-size: 5vh;
-	}
+  ul {
+    font-size: 5vh;
+  }
 
-	hr {
-		border-top: 0;
-		width: 50%;
-		border-color: currentColor;
-		border-style: solid;
-	}
+  hr {
+    border-top: 0;
+    width: 50%;
+    border-color: currentColor;
+    border-style: solid;
+  }
 
-	code {
-		background: #222;
-		border: 1px solid #111;
-		padding: 4px 8px;
-	}
+  code {
+    background: #222;
+    border: 1px solid #111;
+    padding: 4px 8px;
+  }
 
-	a {
-		text-decoration: underline;
-	}
+  a {
+    text-decoration: underline;
+  }
 
-	:global {
-		.ReactCodeMirror .cm-s-reactpresents.CodeMirror {
-			height: fit-content;
-			width: fit-content;
-			zoom: 1.5;
-		}
-	}
+  :global {
+    .ReactCodeMirror .cm-s-reactpresents.CodeMirror {
+      height: fit-content;
+      width: fit-content;
+      zoom: 1.5;
+    }
+  }
 }
 
 .custom-slide.light-mode :global {
-	.ReactCodeMirror .cm-s-reactpresents.CodeMirror {
-		filter: invert(1) contrast(150%) brightness(150%);
+  .ReactCodeMirror .cm-s-reactpresents.CodeMirror {
+    filter: invert(1) contrast(150%) brightness(150%);
 
-		.cm-tag {
-			color: #f82;
-		}
-		.cm-number {
-			color: #7a1;
-		}
-		.cm-comment {
-			color: #888;
-		}
-		.highlight {
-			background-color: rgba(189,147,249, .45);
-		}
-	}
+    .cm-tag {
+      color: #f82;
+    }
+    .cm-keyword {
+      color: #e97;
+    }
+    .cm-operator {
+      color: #4e7;
+    }
+    .cm-number {
+      color: #7a1;
+    }
+    .cm-comment {
+      color: #888;
+    }
+    .highlight {
+      background-color: rgba(189, 147, 249, 0.55);
+    }
+  }
 }
 
 .title-slide {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 
-	h1 {
-		padding-right: 0 !important;
-	}
+  h1 {
+    padding-right: 0 !important;
+  }
 }
 
 .custom-slide + div {
-	// this is the react-presents `TouchNav`, and I can't see that there's another
-	// way to disable it :/
-	display: none;
+  // this is the react-presents `TouchNav`, and I can't see that there's another
+  // way to disable it :/
+  display: none;
 }

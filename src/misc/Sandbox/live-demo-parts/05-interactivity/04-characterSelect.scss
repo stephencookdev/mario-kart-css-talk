@@ -1,0 +1,8 @@
+[name="driver"][value="bowser"]:checked ~ .output .driver:before {
+  box-shadow: $bowser-spritesheet;
+}
+
+/*
+<input type="radio" name="driver" value="mario" checked /> Mario
+<input type="radio" name="driver" value="bowser" /> Bowser
+ */
