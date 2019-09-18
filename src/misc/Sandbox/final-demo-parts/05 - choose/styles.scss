@@ -1,5 +1,6 @@
-@import "./common.scss";
+@import "../../common.scss";
 
+.driver,
 .driver:before,
 .trees:before,
 .trees:after,
@@ -28,10 +29,10 @@ $driver-height: 50px;
 
 @keyframes driver-shake {
   from {
-    transform: translateY(0) scaleY(1);
+    transform: scaleY(1);
   }
   to {
-    transform: translateY(1.5%) scaleY(0.99);
+    transform: scaleY(0.97);
   }
 }
 
@@ -40,7 +41,7 @@ $driver-frame-count: 5;
   box-shadow: $mario-spritesheet;
 }
 
-[type="radio"][name="driver"][value="bowser"]:checked ~ .output .driver:before {
+[name="driver"][value="bowser"]:checked ~ .output .driver:before {
   box-shadow: $bowser-spritesheet;
 }
 

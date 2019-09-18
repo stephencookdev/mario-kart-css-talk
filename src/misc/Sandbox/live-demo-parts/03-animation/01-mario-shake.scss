@@ -1,8 +1,8 @@
 @keyframes driver-shake {
   from {
-    transform: scaleY(1);
+    transform: translateY(0) scaleY(1);
   }
   to {
-    transform: scaleY(0.97);
+    transform: translateY(0.5px) scaleY(0.99);
   }
 }

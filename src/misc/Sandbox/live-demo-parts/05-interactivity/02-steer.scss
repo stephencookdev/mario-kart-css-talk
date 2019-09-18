@@ -1,11 +1,11 @@
-input:valid + .output .mario:before {
-  animation: sprite-animate-mirror 2s steps(#{$mario-frame-count - 1});
+input:valid + .output .driver:before {
+  animation: sprite-animate-mirror 2s steps(#{$driver-frame-count - 1});
 }
 
-input:invalid + .output .mario:before {
-  animation: sprite-animate 2s steps(#{$mario-frame-count - 1});
+input:invalid + .output .driver:before {
+  animation: sprite-animate 2s steps(#{$driver-frame-count - 1});
 }
 
-input:placeholder-shown + .output .mario:before {
+input:placeholder-shown + .output .driver:before {
   animation: none;
 }

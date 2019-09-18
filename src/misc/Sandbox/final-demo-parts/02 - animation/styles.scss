@@ -1,6 +1,7 @@
 @import "../../common.scss";
 
-.mario,
+.driver,
+.driver:before,
 .trees:before,
 .trees:after,
 .road:before,
@@ -13,7 +14,7 @@
   background: transparent;
 }
 
-.mario {
+.driver {
   position: absolute;
   box-shadow: $mario-box-shadow;
   top: 116px;

@@ -6,7 +6,7 @@
 .road:before,
 .road:after,
 .output:before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1px;
   height: 1px;
@@ -24,10 +24,10 @@
 
 @keyframes driver-shake {
   from {
-    transform: scaleY(1);
+    transform: translateY(0) scaleY(1);
   }
   to {
-    transform: scaleY(0.97);
+    transform: translateY(1.5%) scaleY(0.99);
   }
 }
 
@@ -40,16 +40,12 @@
 .trees:before {
   top: 92px;
   left: 12px;
-  animation:
-    tree-left-move 3s ease-in infinite,
-    tree-fade 3s ease-in infinite;
+  animation: tree-left-move 3s ease-in infinite, tree-fade 3s ease-in infinite;
 }
 .trees:after {
   top: 92px;
   left: 196px;
-  animation:
-    tree-right-move 3s ease-in infinite,
-    tree-fade 3s ease-in infinite;
+  animation: tree-right-move 3s ease-in infinite, tree-fade 3s ease-in infinite;
   animation-delay: -1s;
 }
 

@@ -1,6 +1,7 @@
 @import "../../common.scss";
 
-.mario:before,
+.driver,
+.driver:before,
 .trees:before,
 .trees:after,
 .road:before,
@@ -13,14 +14,14 @@
   background: transparent;
 }
 
-$mario-height: 50px;
-.mario {
+$driver-height: 50px;
+.driver {
   position: absolute;
   top: 113px;
   left: 96px;
   transform-origin: 0 50px;
   width: 37px;
-  height: $mario-height;
+  height: $driver-height;
   overflow: hidden;
   animation: driver-shake 0.1s infinite steps(2);
 }
@@ -34,10 +35,10 @@ $mario-height: 50px;
   }
 }
 
-$mario-frame-count: 5;
-.mario:before {
+$driver-frame-count: 5;
+.driver:before {
   box-shadow: $mario-spritesheet;
-  animation: sprite-animate 2s infinite steps(#{$mario-frame-count - 1});
+  animation: sprite-animate 2s infinite steps(#{$driver-frame-count - 1});
 }
 
 @keyframes sprite-animate {
@@ -45,7 +46,7 @@ $mario-frame-count: 5;
     margin-top: 0;
   }
   50% {
-    margin-top: -#{$mario-height * ($mario-frame-count - 1)};
+    margin-top: -#{$driver-height * ($driver-frame-count - 1)};
   }
   100% {
     margin-top: 0;

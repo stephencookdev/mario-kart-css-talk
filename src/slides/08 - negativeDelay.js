@@ -7,7 +7,7 @@ export default () => (
     <div className={styles.hugeText}>
       <q className={styles.quote}>
         <span className={styles.quoteHighlight}>
-          A negative delay is valid.
+          A negative [animation-delay] is valid.
         </span>{" "}
         Similar to a delay of 0s, it means that the animation executes
         immediately, but is automatically progressed by the absolute value of
