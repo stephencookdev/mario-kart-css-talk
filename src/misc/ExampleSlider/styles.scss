@@ -15,12 +15,16 @@
   background: rgba(0, 0, 0, 0.4);
   width: 30vw;
   height: 30vh;
+
+  :global(.light-mode) & {
+    background: #fff;
+  }
 }
 
 .actualSlider,
 .exampleSlider {
   position: absolute;
-  width: 2px;
+  width: 10px;
   animation-name: example-slider;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -29,13 +33,13 @@
 .actualSlider {
   height: 120%;
   top: -10%;
-  background: red;
+  background: #ff4557;
 }
 
 .exampleSlider {
   height: 100%;
   top: 0;
-  background: green;
+  background: #3351c8;
   animation-timing-function: linear;
 }
 

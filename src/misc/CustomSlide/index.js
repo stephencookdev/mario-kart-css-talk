@@ -18,7 +18,7 @@ export default ({ children, title }) => {
     <ContentSlide
       className={classNames(styles["custom-slide"], {
         [styles["title-slide"]]: title,
-        [styles["light-mode"]]: !darkMode
+        "light-mode": !darkMode
       })}
     >
       {children}

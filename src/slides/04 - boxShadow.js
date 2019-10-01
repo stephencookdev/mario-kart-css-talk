@@ -1,7 +1,6 @@
 import React from "react";
 import { Code, Step } from "react-presents";
 import classNames from "classnames";
-import HighlightList from "../misc/HighlightList";
 import CustomSlide from "../misc/CustomSlide";
 import styles from "./common.scss";
 

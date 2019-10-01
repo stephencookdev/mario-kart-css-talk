@@ -80,6 +80,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  img:first-of-type:last-of-type {
+    height: 50vh;
+  }
 }
 .spread {
   height: 100%;

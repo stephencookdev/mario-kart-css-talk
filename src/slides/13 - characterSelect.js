@@ -12,10 +12,10 @@ const htmlSolution = `<input type="radio" name="option" value="a" /> Option A
 <input type="radio" name="option" value="b" /> Option B
 <div></div>`;
 const cssSolution = `[name="option"][value="a"]:checked ~ div {
-  border-color: green;
+  background-color: blue;
 }
 [name="option"][value="b"]:checked ~ div {
-  border-color: red;
+  background-color: red;
 }`;
 
 export default () => (
@@ -50,17 +50,18 @@ export default () => (
         </div>
         <style type="text/css">{`
           [name="option"][value="a"]:checked ~ div[data-solution-target] {
-            border-color: green;
+            background-color: #3351c8;
           }
           [name="option"][value="b"] {
             margin-left: 4vh;
           }
           [name="option"][value="b"]:checked ~ div[data-solution-target] {
-            border-color: red;
+            background-color: #ff4557;
           }
           div[data-solution-target] {
             margin: 4vh auto 0;
             border: 5px solid black;
+            background: white;
             width: 10vh;
             height: 10vh;
           }

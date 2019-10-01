@@ -6,6 +6,10 @@
   line-height: 1.5;
   overflow: hidden;
 
+  &:global(.light-mode) {
+    background: #5b5d69;
+  }
+
   h1 {
     border-bottom: 0.25rem solid currentColor;
     padding-bottom: 1rem;
@@ -41,12 +45,12 @@
     .ReactCodeMirror .cm-s-reactpresents.CodeMirror {
       height: fit-content;
       width: fit-content;
-      zoom: 1.5;
+      zoom: 2;
     }
   }
 }
 
-.custom-slide.light-mode :global {
+.custom-slide:global(.light-mode) :global {
   .ReactCodeMirror .cm-s-reactpresents.CodeMirror {
     filter: invert(1) contrast(150%) brightness(150%);
 
