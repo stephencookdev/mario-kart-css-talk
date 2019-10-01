@@ -10,8 +10,10 @@ export default () => (
     <CursorHider />
     <CodeZoomHandler />
 
-    {Object.keys(slides).map(name => (
-      <Slide component={slides[name].default} key={name} />
-    ))}
+    {Object.keys(slides)
+      .sort((s1, s2) => s1.localeCompare(s2))
+      .map(name => (
+        <Slide component={slides[name].default} key={name} />
+      ))}
   </Presentation>
 );
