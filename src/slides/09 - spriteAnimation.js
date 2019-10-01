@@ -93,12 +93,8 @@ export default () => (
 
         <div style={{ width: "30vh", height: "30vh" }}>
           <div
+            className={styles.boxShadowDiv}
             style={{
-              width: "10vh",
-              height: "10vh",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
               background: "#ff4557",
               boxShadow: `10vh 0 #3351c8, 20vh 0 #ff4557,
                       0 10vh #3351c8, 10vh 10vh #ff4557, 20vh 10vh #3351c8,
@@ -123,12 +119,8 @@ export default () => (
           }}
         >
           <div
+            className={styles.boxShadowDiv}
             style={{
-              width: "10vh",
-              height: "10vh",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
               position: "absolute",
               background: "#ff4557",
               boxShadow: `10vh 0 #3351c8, 20vh 0 #ff4557,

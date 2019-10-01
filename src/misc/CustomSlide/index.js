@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ContentSlide } from "react-presents";
 import classNames from "classnames";
 import styles from "./styles.scss";
 
@@ -15,13 +14,13 @@ export default ({ children, title }) => {
   };
 
   return (
-    <ContentSlide
+    <div
       className={classNames(styles["custom-slide"], {
         [styles["title-slide"]]: title,
         "light-mode": !darkMode
       })}
     >
       {children}
-    </ContentSlide>
+    </div>
   );
 };

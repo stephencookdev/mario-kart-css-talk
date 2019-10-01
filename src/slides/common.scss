@@ -1,6 +1,14 @@
 :global {
   @import "../lib/codemirror.scss";
 }
+@import "../lib/manjari.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manjari", sans-serif;
+}
 
 .subtitle {
   font-size: 5vh;
@@ -38,9 +46,16 @@
   justify-content: center;
   height: 100%;
 }
-.smallCode {
-  zoom: 0.55;
-  overflow: hidden;
+
+.boxShadowDiv {
+  width: 10vh;
+  height: 9.5vh;
+  padding-top: 0.5vh;
+  font-size: 3.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
 }
 
 .me {

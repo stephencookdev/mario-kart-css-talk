@@ -67,13 +67,8 @@ export default () => (
           }`}
         </style>
         <div
+          className={styles.boxShadowDiv}
           style={{
-            width: "10vh",
-            height: "10vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "black",
             animationDuration: "3s",
             animationName: "my-cool-animation",
             animationIterationCount: "infinite"
@@ -105,13 +100,8 @@ export default () => (
           }`}
         </style>
         <div
+          className={styles.boxShadowDiv}
           style={{
-            width: "10vh",
-            height: "10vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "black",
             animationDuration: "3s",
             animationName: "my-cool-animation",
             animationIterationCount: "infinite",

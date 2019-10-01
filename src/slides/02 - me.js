@@ -38,7 +38,7 @@ export default () => (
 
       <hr className={styles.pink} />
 
-      <span className={styles.me}>https://thread.com/jobs/</span>
+      <span className={styles.me}>https://thread.com/jobs</span>
     </Step>
   </CustomSlide>
 );

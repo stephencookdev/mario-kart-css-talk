@@ -1,12 +1,14 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import { Presentation, PresenterModePlugin, Slide, DropDownNav } from "react-presents";
+import { Presentation, Slide } from "react-presents";
+import CursorHider from "./misc/CursorHider";
+import CodeZoomHandler from "./misc/CodeZoomHandler";
 
 const slides = require("./slides/*.js");
 
 export default () => (
-  <Presentation>
-    <PresenterModePlugin />
+  <Presentation disableTheme>
+    <CursorHider />
+    <CodeZoomHandler />
 
     {Object.keys(slides).map(name => (
       <Slide component={slides[name].default} key={name} />

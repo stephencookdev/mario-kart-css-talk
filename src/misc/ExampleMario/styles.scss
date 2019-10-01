@@ -16,7 +16,7 @@ $frame-count: 5;
 
   &.showAll {
     height: #{$base-height * $frame-count};
-    transform: scale(1);
+    transform: scale(2);
   }
 }
 

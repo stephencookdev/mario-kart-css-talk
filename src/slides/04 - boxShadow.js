@@ -39,13 +39,8 @@ export default () => (
         <Code value={singleBoxShadow} codeMirrorOptions={{ mode: "css" }} />
 
         <div
+          className={styles.boxShadowDiv}
           style={{
-            width: "10vh",
-            height: "10vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "black",
             boxShadow: "1vh 2vh 2vh #ff4557"
           }}
         >
@@ -59,13 +54,8 @@ export default () => (
         <Code value={multipleBoxShadow} codeMirrorOptions={{ mode: "css" }} />
 
         <div
+          className={styles.boxShadowDiv}
           style={{
-            width: "10vh",
-            height: "10vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "black",
             boxShadow: "1vh 2vh 2vh #ff4557, 6vh 7vh 2vh #3351c8"
           }}
         >
@@ -82,13 +72,8 @@ export default () => (
         />
 
         <div
+          className={styles.boxShadowDiv}
           style={{
-            width: "10vh",
-            height: "10vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "black",
             boxShadow: "1vh 2vh 0 #ff4557, 6vh 7vh 0 #3351c8"
           }}
         >
@@ -102,13 +87,8 @@ export default () => (
         <Code value={pixelArtStart} codeMirrorOptions={{ mode: "css" }} />
 
         <div
+          className={styles.boxShadowDiv}
           style={{
-            width: "10vh",
-            height: "10vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "black",
             boxShadow: "10vh 0 #3351c8, 20vh 0 #ff4557"
           }}
         >
@@ -123,12 +103,8 @@ export default () => (
 
         <div style={{ width: "30vh", height: "30vh" }}>
           <div
+            className={styles.boxShadowDiv}
             style={{
-              width: "10vh",
-              height: "10vh",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
               background: "#ff4557",
               boxShadow: `10vh 0 #3351c8, 20vh 0 #ff4557,
                         0 10vh #3351c8, 10vh 10vh #ff4557, 20vh 10vh #3351c8,

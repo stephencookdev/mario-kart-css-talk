@@ -4,6 +4,8 @@
   width: 100%;
   height: 100%;
   line-height: 1.5;
+  padding: 2vh 2vh 8vh;
+  box-sizing: border-box;
   overflow: hidden;
 
   &:global(.light-mode) {
@@ -11,11 +13,11 @@
   }
 
   h1 {
-    border-bottom: 0.25rem solid currentColor;
+    border-bottom: 0.5vh solid currentColor;
     padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    font-size: 10vh;
-    line-height: 1.2;
+    margin: 1rem 0 3rem;
+    font-size: 9vh;
+    line-height: 1;
   }
 
   ul {
@@ -27,8 +29,8 @@
     width: 50%;
     border-color: currentColor;
     border-style: solid;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
+    border-top-width: 1vh;
+    margin: 4vh 0;
   }
 
   code {
@@ -38,6 +40,7 @@
   }
 
   a {
+    color: #f92672;
     text-decoration: underline;
   }
 
@@ -45,32 +48,78 @@
     .ReactCodeMirror .cm-s-reactpresents.CodeMirror {
       height: fit-content;
       width: fit-content;
-      zoom: 2;
+      zoom: var(--code-zoom-amount, 2);
+      border-radius: 0.5em;
+
+      .CodeMirror-line {
+        overflow: hidden;
+      }
+
+      .highlight {
+        display: inline-block;
+
+        &:last-of-type {
+          width: 100%;
+        }
+      }
     }
   }
 }
 
 .custom-slide:global(.light-mode) :global {
-  .ReactCodeMirror .cm-s-reactpresents.CodeMirror {
-    filter: invert(1) contrast(150%) brightness(150%);
+  .ReactCodeMirror {
+    border-radius: 0.5em;
+    overflow: hidden;
+  }
 
-    .cm-tag {
-      color: #f82;
+  .ReactCodeMirror .cm-s-reactpresents.CodeMirror {
+    background: #fff !important;
+    color: #000 !important;
+
+    div.CodeMirror-cursor {
+      border-left: 3px solid #000000;
     }
-    .cm-keyword {
-      color: #e97;
+    .CodeMirror-activeline-background {
+      background: #0000001a;
     }
-    .cm-operator {
-      color: #4e7;
+    .CodeMirror-selected {
+      background: #bad6fd;
+    }
+    .cm-string {
+      color: #c41a16;
     }
     .cm-number {
-      color: #7a1;
+      color: null;
+    }
+    .cm-keyword {
+      color: #aa0d91;
+    }
+    .cm-atom {
+      color: null;
+    }
+    .cm-variable {
+      color: #000000;
+    }
+    .cm-def {
+      font-style: italic;
     }
     .cm-comment {
-      color: #888;
+      color: #007400;
+    }
+    .cm-variable-2 {
+      color: #881280;
+    }
+    .cm-property {
+      color: null;
+    }
+    .cm-operator {
+      color: #aa0d91;
+    }
+    .CodeMirror-linenumber {
+      color: #007400;
     }
     .highlight {
-      background-color: rgba(189, 147, 249, 0.55);
+      background: #e8f2ff;
     }
   }
 }
