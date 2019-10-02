@@ -17,6 +17,10 @@ $frame-count: 5;
   &.showAll {
     height: #{$base-height * $frame-count};
     transform: scale(2);
+
+    @media (max-width: 856px) {
+      transform: scale(1);
+    }
   }
 }
 

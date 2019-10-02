@@ -18,6 +18,10 @@
     margin: 1rem 0 3rem;
     font-size: 9vh;
     line-height: 1;
+
+    @media (max-width: 856px) {
+      margin: 1rem 0;
+    }
   }
 
   ul {
@@ -50,6 +54,7 @@
       width: fit-content;
       zoom: var(--code-zoom-amount, 2);
       border-radius: 0.5em;
+      font-size: 1.5vh;
 
       .CodeMirror-line {
         overflow: hidden;
@@ -139,5 +144,11 @@
 .custom-slide + div {
   // this is the react-presents `TouchNav`, and I can't see that there's another
   // way to disable it :/
-  display: none;
+  button:disabled {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 856px) {
+    display: none;
+  }
 }
