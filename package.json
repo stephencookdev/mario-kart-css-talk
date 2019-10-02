@@ -21,6 +21,7 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url='/slides/mario-kart-css-talk' && echo '!!!' && echo 'Remember to add `; charset=utf-8` to the metadata of your JS file on upload to S3' && echo '!!!'",
     "precommit": "lint-staged"
   },
   "lint-staged": {
