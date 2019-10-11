@@ -16,12 +16,20 @@
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
+    "@prerenderer/prerenderer": "^0.7.2",
+    "@prerenderer/renderer-puppeteer": "^0.2.0",
+    "chalk": "^2.4.2",
+    "htmlnano": "^0.2.4",
+    "mkdirp": "^0.5.1",
+    "ora": "^4.0.2",
     "parcel": "^1.12.3",
-    "postcss-icss-selectors": "^2.0.3"
+    "parcel-bundler": "^1.12.4",
+    "postcss-icss-selectors": "^2.0.3",
+    "pretty-ms": "^5.0.0"
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url='/slides/mario-kart-css-talk' && echo '!!!' && echo 'Remember to add `; charset=utf-8` to the metadata of your JS file on upload to S3' && echo '!!!'",
+    "build": "NODE_ENV=production PUBLIC_URL=/slides/mario-kart-css-talk  node build.js",
     "precommit": "lint-staged"
   },
   "lint-staged": {
