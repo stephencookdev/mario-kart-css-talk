@@ -66,7 +66,7 @@ export default () => (
             height: 10vh;
           }
         `}</style>
-        <div>
+        <div className={styles.largerFont}>
           <input type="radio" name="option" value="a" /> Option A
           <input type="radio" name="option" value="b" /> Option B
           <div data-solution-target />
