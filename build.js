@@ -56,12 +56,6 @@ bundler.on("buildEnd", async () => {
       symbol: "✨ ",
       text: chalk.green(`Prerendered in ${prettyMs(end - start)}.`)
     });
-    console.log("");
-    console.log("!!!");
-    console.log(
-      "Remember to add `; charset=utf-8` to the metadata of your JS file on upload to S3"
-    );
-    console.log("!!!");
   } catch (error) {
     console.error(error);
     // eslint-disable-next-line unicorn/no-process-exit, no-process-exit
