@@ -6,8 +6,6 @@ import Sandbox01 from "./misc/Sandbox/wrappers/final/01 - scenery";
 import Sandbox02 from "./misc/Sandbox/wrappers/final/02 - animation";
 import Sandbox03 from "./misc/Sandbox/wrappers/final/03 - spriteAnimation";
 import Sandbox04 from "./misc/Sandbox/wrappers/final/04 - interactivity";
-require("codemirror/mode/css/css");
-require("codemirror/mode/htmlmixed/htmlmixed");
 
 export default () => (
   <HashRouter>

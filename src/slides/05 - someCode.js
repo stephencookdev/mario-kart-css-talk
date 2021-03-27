@@ -1,15 +1,14 @@
 import React from "react";
-import CustomSlide from "../misc/CustomSlide";
-import styles from "./common.scss";
+import { Slide } from "zlides";
 
 export default () => (
-  <CustomSlide title={true}>
-    <div className={styles.hugeText}>
-      <span className={styles.main}>Live coding</span>
+  <Slide title={true}>
+    <div className="hugeText">
+      <span className="main">Live coding</span>
       <br />
       <a href="#/sandbox" target="_blank">
         Let's a go!
       </a>
     </div>
-  </CustomSlide>
+  </Slide>
 );

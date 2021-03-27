@@ -1,8 +1,6 @@
 import React from "react";
-import { Code, Step } from "react-presents";
-import classNames from "classnames";
-import CustomSlide from "../misc/CustomSlide";
-import styles from "./common.scss";
+import { Code, Step, Slide } from "zlides";
+import styles from "./styles.scss";
 
 const singleBoxShadow = `div {
   box-shadow: x y blur colour;
@@ -31,11 +29,11 @@ const pixelArt = `div {
 }`;
 
 export default () => (
-  <CustomSlide>
+  <Slide>
     <h1>Box Shadow</h1>
 
     <Step index={0} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
+      <div className="centerWithHeader displayRight">
         <Code value={singleBoxShadow} codeMirrorOptions={{ mode: "css" }} />
 
         <div
@@ -50,7 +48,7 @@ export default () => (
     </Step>
 
     <Step index={1} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
+      <div className="centerWithHeader displayRight">
         <Code value={multipleBoxShadow} codeMirrorOptions={{ mode: "css" }} />
 
         <div
@@ -65,7 +63,7 @@ export default () => (
     </Step>
 
     <Step index={2} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
+      <div className="centerWithHeader displayRight">
         <Code
           value={multipleBoxShadowFlat}
           codeMirrorOptions={{ mode: "css" }}
@@ -83,7 +81,7 @@ export default () => (
     </Step>
 
     <Step index={3} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
+      <div className="centerWithHeader displayRight">
         <Code value={pixelArtStart} codeMirrorOptions={{ mode: "css" }} />
 
         <div
@@ -98,7 +96,7 @@ export default () => (
     </Step>
 
     <Step index={4} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
+      <div className="centerWithHeader displayRight">
         <Code value={pixelArt} codeMirrorOptions={{ mode: "css" }} />
 
         <div style={{ width: "30vh", height: "30vh" }}>
@@ -116,5 +114,5 @@ export default () => (
         </div>
       </div>
     </Step>
-  </CustomSlide>
+  </Slide>
 );

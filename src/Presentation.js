@@ -1,19 +1,17 @@
 import React from "react";
-import { Presentation, Slide } from "react-presents";
-import CursorHider from "./misc/CursorHider";
-import CodeZoomHandler from "./misc/CodeZoomHandler";
+import { Presentation as ZlidesPresentation } from "zlides";
 
-const slides = require("./slides/*.js");
-
-export default () => (
-  <Presentation disableTheme>
-    <CursorHider />
-    <CodeZoomHandler />
-
-    {Object.keys(slides)
-      .sort((s1, s2) => s1.localeCompare(s2))
-      .map(name => (
-        <Slide component={slides[name].default} key={name} />
-      ))}
-  </Presentation>
+const slidesReq = require("./slides/*.js");
+const slides = Object.keys(slidesReq).reduce(
+  (acc, key) => ({
+    ...acc,
+    [key]: slidesReq[key].default
+  }),
+  {}
 );
+
+const Presentation = () => {
+  return <ZlidesPresentation slides={slides} />;
+};
+
+export default Presentation;

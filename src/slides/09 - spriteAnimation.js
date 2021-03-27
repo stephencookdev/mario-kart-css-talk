@@ -1,9 +1,7 @@
 import React from "react";
-import { Code, Step } from "react-presents";
-import classNames from "classnames";
+import { Code, Step, Slide } from "zlides";
 import ExampleMario from "../misc/ExampleMario";
-import CustomSlide from "../misc/CustomSlide";
-import styles from "./common.scss";
+import styles from "./styles.scss";
 
 const pixelArt = `div {
   background: red;
@@ -34,23 +32,23 @@ div:after {
 }`;
 
 export default () => (
-  <CustomSlide>
+  <Slide>
     <h1>Sprite Animation</h1>
 
     <Step index={0} exact>
-      <div className={styles.centerWithHeader}>
+      <div className="centerWithHeader">
         <ExampleMario />
       </div>
     </Step>
 
     <Step index={1} exact>
-      <div className={styles.centerWithHeader}>
+      <div className="centerWithHeader">
         <ExampleMario showAll={true} />
       </div>
     </Step>
 
     <Step index={2} exact>
-      <div className={styles.centerWithHeader}>
+      <div className="centerWithHeader">
         <ExampleMario
           occlude={false}
           styleOverride={{
@@ -62,7 +60,7 @@ export default () => (
     </Step>
 
     <Step index={3} exact>
-      <div className={classNames(styles.centerWithHeader, styles.sidebyside)}>
+      <div className="centerWithHeader sidebyside">
         <ExampleMario
           occlude={false}
           styleOverride={{
@@ -88,7 +86,7 @@ export default () => (
     </Step>
 
     <Step index={4} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
+      <div className="centerWithHeader displayRight">
         <Code value={pixelArt} codeMirrorOptions={{ mode: "css" }} />
 
         <div style={{ width: "30vh", height: "30vh" }}>
@@ -108,7 +106,7 @@ export default () => (
     </Step>
 
     <Step index={5} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
+      <div className="centerWithHeader displayRight">
         <Code value={pixelArtAfter} codeMirrorOptions={{ mode: "css" }} />
 
         <div
@@ -155,5 +153,5 @@ export default () => (
         </div>
       </div>
     </Step>
-  </CustomSlide>
+  </Slide>
 );

@@ -1,10 +1,7 @@
 import React from "react";
-import { Code, Step } from "react-presents";
-import classNames from "classnames";
-import HighlightList from "../misc/HighlightList";
-import CustomSlide from "../misc/CustomSlide";
-import styles from "./common.scss";
+import { Code, Step, Slide } from "zlides";
 import wasd from "../images/wasd.jpg";
+import styles from "./styles.scss";
 
 const inputValue = `input[value="a"] {
   border-color: red;
@@ -50,17 +47,17 @@ const inputValidWasd = `<input
 />`;
 
 export default () => (
-  <CustomSlide>
+  <Slide>
     <h1>Interactivity</h1>
 
     <Step index={0} exact>
-      <div className={styles.centerWithHeader}>
+      <div className="centerWithHeader">
         <img src={wasd} />
       </div>
     </Step>
 
     <Step index={1} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
+      <div className="centerWithHeader displayRight">
         <Code value={inputValue} codeMirrorOptions={{ mode: "css" }} />
 
         <input className={styles.baseDemoInput} />
@@ -68,7 +65,7 @@ export default () => (
     </Step>
 
     <Step index={2} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
+      <div className="centerWithHeader displayRight">
         <Code
           value={inputWithValue}
           codeMirrorOptions={{ mode: "htmlmixed" }}
@@ -79,7 +76,7 @@ export default () => (
     </Step>
 
     <Step index={3} exact>
-      <div className={styles.centerWithHeader}>
+      <div className="centerWithHeader">
         <Code
           value={cheatInputValue}
           codeMirrorOptions={{ mode: "javascript" }}
@@ -88,16 +85,16 @@ export default () => (
     </Step>
 
     <Step index={4} exact>
-      <div className={classNames(styles.hugeText, styles.centerWithHeader)}>
-        <span className={styles.main}>:valid</span>
+      <div className="hugeText centerWithHeader">
+        <span className="main">:valid</span>
         {"&"}
-        <span className={styles.main}>:invalid</span>
+        <span className="main">:invalid</span>
       </div>
     </Step>
 
     <Step index={5} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
-        <div className={styles.spread}>
+      <div className="centerWithHeader displayRight">
+        <div className="spread">
           <Code value={inputValid} codeMirrorOptions={{ mode: "htmlmixed" }} />
           <Code value={inputValidStyles} codeMirrorOptions={{ mode: "css" }} />
         </div>
@@ -116,8 +113,8 @@ export default () => (
     </Step>
 
     <Step index={6} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
-        <div className={styles.spread}>
+      <div className="centerWithHeader displayRight">
+        <div className="spread">
           <Code
             value={inputValidPlaceholder}
             codeMirrorOptions={{ mode: "htmlmixed" }}
@@ -149,8 +146,8 @@ export default () => (
     </Step>
 
     <Step index={7} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
-        <div className={styles.spread}>
+      <div className="centerWithHeader displayRight">
+        <div className="spread">
           <Code
             value={inputValidWasd}
             codeMirrorOptions={{ mode: "htmlmixed" }}
@@ -174,7 +171,7 @@ export default () => (
           }
         `}</style>
 
-        <div className={styles.spread}>
+        <div className="spread">
           <input
             className={styles.baseDemoInput}
             pattern=".*d$"
@@ -189,5 +186,5 @@ export default () => (
         </div>
       </div>
     </Step>
-  </CustomSlide>
+  </Slide>
 );

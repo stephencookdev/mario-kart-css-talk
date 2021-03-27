@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "zlides": {
+      "signature": "01b5f61470a9e6f6316f4846f5d35c6a",
+      "file": true
+    }
+  }
+}

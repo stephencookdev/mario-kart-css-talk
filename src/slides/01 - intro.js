@@ -1,9 +1,9 @@
 import React from "react";
-import CustomSlide from "../misc/CustomSlide";
-import styles from "./common.scss";
+import { Slide } from "zlides";
+import styles from "./styles.scss";
 
 export default () => (
-  <CustomSlide title={true}>
+  <Slide title>
     <div className={styles.introImg} />
-  </CustomSlide>
+  </Slide>
 );

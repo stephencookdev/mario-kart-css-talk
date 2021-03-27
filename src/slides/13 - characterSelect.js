@@ -1,8 +1,5 @@
 import React from "react";
-import classNames from "classnames";
-import { Code, Step } from "react-presents";
-import CustomSlide from "../misc/CustomSlide";
-import styles from "./common.scss";
+import { Code, Step, Slide } from "zlides";
 import yoink from "../images/yoink.gif";
 
 const radioInputs = `<input type="radio" name="option" value="a" /> Option A
@@ -19,29 +16,29 @@ const cssSolution = `[name="option"][value="a"]:checked ~ div {
 }`;
 
 export default () => (
-  <CustomSlide>
+  <Slide>
     <h1>Character Select</h1>
 
     <Step index={0} exact>
-      <div className={styles.centerWithHeader}>
+      <div className="centerWithHeader">
         <img src={yoink} alt="Yoink" />
       </div>
     </Step>
     <Step index={1} exact>
-      <div className={styles.centerWithHeader}>
+      <div className="centerWithHeader">
         <Code value={radioInputs} codeMirrorOptions={{ mode: "htmlmixed" }} />
       </div>
     </Step>
     <Step index={2} exact>
-      <div className={classNames(styles.hugeText, styles.centerWithHeader)}>
-        <span className={styles.main}>:checked</span>
+      <div className="hugeText centerWithHeader">
+        <span className="main">:checked</span>
         {"&"}
-        <span className={styles.main}>~</span>
+        <span className="main">~</span>
       </div>
     </Step>
     <Step index={3} exact>
-      <div className={classNames(styles.centerWithHeader, styles.displayRight)}>
-        <div className={styles.spread}>
+      <div className="centerWithHeader displayRight">
+        <div className="spread">
           <Code
             value={htmlSolution}
             codeMirrorOptions={{ mode: "htmlmixed" }}
@@ -66,12 +63,12 @@ export default () => (
             height: 10vh;
           }
         `}</style>
-        <div className={styles.largerFont}>
+        <div className="largerFont">
           <input type="radio" name="option" value="a" /> Option A
           <input type="radio" name="option" value="b" /> Option B
           <div data-solution-target />
         </div>
       </div>
     </Step>
-  </CustomSlide>
+  </Slide>
 );

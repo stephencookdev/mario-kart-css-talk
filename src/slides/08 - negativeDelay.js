@@ -1,12 +1,11 @@
 import React from "react";
-import CustomSlide from "../misc/CustomSlide";
-import styles from "./common.scss";
+import { Slide } from "zlides";
 
 export default () => (
-  <CustomSlide title={true}>
-    <div className={styles.hugeText}>
-      <q className={styles.quote}>
-        <span className={styles.quoteHighlight}>
+  <Slide title={true}>
+    <div className="hugeText">
+      <q className="quote">
+        <span className="quoteHighlight">
           A negative [animation-delay] is valid.
         </span>{" "}
         Similar to a delay of 0s, it means that the animation executes
@@ -15,5 +14,5 @@ export default () => (
         past, and so it appears to start partway through its active duration.
       </q>
     </div>
-  </CustomSlide>
+  </Slide>
 );

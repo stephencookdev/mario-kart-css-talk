@@ -1,0 +1,124 @@
+.boxShadowDiv {
+  width: 10vh;
+  height: 9.5vh;
+  padding-top: 0.5vh;
+  font-size: 3.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+.baseDemoInput {
+  font-size: 9vh;
+  padding: 2vh;
+  border: 1vh solid transparent;
+  border-radius: 0.5vh;
+  outline: none;
+}
+
+.wasd {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5vh;
+  align-items: center;
+  justify-items: center;
+}
+.wasd:after {
+  grid-column-start: span 3;
+  margin-top: 1vh;
+}
+
+:valid + .wasd:after {
+  content: "('d' key pushed)";
+}
+:invalid + .wasd:after {
+  content: "('a' key pushed)";
+}
+:placeholder-shown + .wasd:after {
+  content: "(No keyboard input)";
+  opacity: 0.5;
+}
+.wasdW,
+.wasdA,
+.wasdS,
+.wasdD {
+  width: 10vh;
+  height: 10vh;
+  border: 1vh solid #111;
+  border-radius: 2vh;
+  background: #eee;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vh;
+  transition: 0.3s ease background-color, 0.3s ease transform;
+  transform: translateZ(0);
+}
+.wasdW {
+  grid-column-start: span 3;
+}
+:valid:not(:placeholder-shown) + .wasd .wasdD {
+  background-color: #fcc;
+  transform: scale(1.1) rotate(10deg);
+}
+:invalid:not(:placeholder-shown) + .wasd .wasdA {
+  background-color: #fcc;
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.introImg {
+  &,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    image-rendering: pixelated;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  & {
+    background-image: url("../images/intro.png");
+  }
+  &::after {
+    content: "";
+    background-image: url("../images/introFg.png");
+    animation: introFade 2s infinite step-end;
+  }
+  &::before {
+    content: "CSS";
+    display: block;
+    position: absolute;
+    top: 33%;
+    left: 53%;
+    font-size: 15vh;
+    letter-spacing: 2vh;
+    font-weight: 900;
+    text-shadow: rgb(168, 0, 0) 0 -3px, rgb(168, 0, 0) -3px 0,
+      rgb(168, 0, 0) 0 3px, rgb(168, 0, 0) 3px 0;
+    animation: introHover 6s infinite ease-out;
+  }
+}
+@keyframes introFade {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes introHover {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}

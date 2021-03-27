@@ -1,15 +1,13 @@
 import React from "react";
-import { Step } from "react-presents";
-import CustomSlide from "../misc/CustomSlide";
-import styles from "./common.scss";
+import { Slide } from "zlides";
 import mario from "../images/mario.gif";
 
 export default () => (
-  <CustomSlide>
+  <Slide>
     <h1>Mario, please &mdash; no more CSS</h1>
 
-    <div className={styles.centerWithHeader}>
+    <div className="centerWithHeader">
       <img src={mario} />
     </div>
-  </CustomSlide>
+  </Slide>
 );
