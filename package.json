@@ -8,7 +8,7 @@
     "@prerenderer/renderer-puppeteer": "^0.2.0",
     "chalk": "^2.4.2",
     "classnames": "^2.2.6",
-    "htmlnano": "^0.2.4",
+    "html-minifier": "^4.0.0",
     "husky": "^1.1.1",
     "lint-staged": "^7.3.0",
     "mkdirp": "^0.5.1",
@@ -23,14 +23,15 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^4.3.1",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "zlides": "^1.1.0"
   },
   "files": [
     "dist/"
   ],
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "NODE_ENV=production PUBLIC_URL=/slides/mario-kart-css-talk  node build.js",
+    "build": "NODE_ENV=production PUBLIC_URL=/slides/mario-kart-css-talk node build.js",
     "clean": "rm -rf dist/",
     "prepublishOnly": "npm run clean && npm run build",
     "precommit": "lint-staged"
@@ -50,9 +51,5 @@
   "bugs": {
     "url": "https://github.com/stephencookdev/mario-kart-css-talk/issues"
   },
-  "homepage": "https://github.com/stephencookdev/mario-kart-css-talk#readme",
-  "dependencies": {
-    "react-presents": "^0.8.1",
-    "zlides": "file:.yalc/zlides"
-  }
+  "homepage": "https://github.com/stephencookdev/mario-kart-css-talk#readme"
 }

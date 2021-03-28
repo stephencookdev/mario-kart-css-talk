@@ -7,7 +7,7 @@ const chalk = require("chalk");
 const mkdirp = require("mkdirp");
 const Prerenderer = require("@prerenderer/prerenderer");
 const Puppeteer = require("@prerenderer/renderer-puppeteer");
-const htmlnano = require("htmlnano");
+const { minify } = require("html-minifier");
 const prettyMs = require("pretty-ms");
 
 const bundler = new Bundler("src/index.html", {
@@ -26,11 +26,13 @@ bundler.on("buildEnd", async () => {
 
   const { outDir } = bundler.options;
 
-  const publicPathOutDir = `${outDir}${process.env.PUBLIC_URL}`;
-  mkdirp.sync(publicPathOutDir);
-  execSync(
-    `find ${outDir} -maxdepth 1 -type f | xargs -I {} cp {} ${publicPathOutDir}`
-  );
+  const publicPathOutDir = `${outDir}${process.env.PUBLIC_URL || ""}`;
+  if (publicPathOutDir !== outDir) {
+    mkdirp.sync(publicPathOutDir);
+    execSync(
+      `find ${outDir} -maxdepth 1 -type f | xargs -I {} cp {} ${publicPathOutDir}`
+    );
+  }
 
   const prerenderer = new Prerenderer({
     staticDir: outDir,
@@ -45,12 +47,14 @@ bundler.on("buildEnd", async () => {
         const outputDir = path.join(outDir, route.route);
         const file = path.resolve(outputDir, "index.html");
         mkdirp.sync(outputDir);
-        const { html } = await htmlnano.process(route.html.trim());
+        const html = minify(route.html, { minifyCSS: true });
         // eslint-disable-next-line no-sync
         fs.writeFileSync(file, html);
       })
     );
-    execSync(`rm -rf ${publicPathOutDir}`);
+    if (publicPathOutDir !== outDir) {
+      execSync(`rm -rf ${publicPathOutDir}`);
+    }
     const end = Date.now();
     spinner.stopAndPersist({
       symbol: "✨ ",

@@ -1,14 +1,12 @@
 import React from "react";
-import { Slide } from "zlides";
+import { Slide, SandboxLink } from "zlides";
 
 export default () => (
-  <Slide title={true}>
+  <Slide title>
     <div className="hugeText">
       <span className="main">Live coding</span>
       <br />
-      <a href="#/sandbox" target="_blank">
-        Let's a go!
-      </a>
+      <SandboxLink to="05 - choose">Let's a go!</SandboxLink>
     </div>
   </Slide>
 );

@@ -1,19 +1,20 @@
 @import "./common.scss";
 
-.mario,
+.driver,
+.driver:before,
 .trees:before,
 .trees:after,
 .road:before,
 .road:after,
 .output:before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1px;
   height: 1px;
   background: transparent;
 }
 
-.mario {
+.driver {
   position: absolute;
   box-shadow: $mario-box-shadow;
   top: 116px;

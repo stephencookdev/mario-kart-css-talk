@@ -2,7 +2,7 @@ import React from "react";
 import { Slide } from "zlides";
 
 export default () => (
-  <Slide title={true}>
+  <Slide title>
     <div className="hugeText">
       <q className="quote">
         <span className="quoteHighlight">

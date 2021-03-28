@@ -2,7 +2,7 @@ import React from "react";
 import { Slide } from "zlides";
 
 export default () => (
-  <Slide title={true}>
+  <Slide title>
     <span className="me twitter">
       <svg
         xmlns="http://www.w3.org/2000/svg"
